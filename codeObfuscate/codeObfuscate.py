@@ -51,5 +51,21 @@ def main():
     reversed_string = concatenated_string[::-1]
     print("Reversed: ", reversed_string)
 
-if __name__ == "__main__":
-    main()
+with open('codeObfuscate.py', 'r') as file:
+    scriptCode = file.read()
+        
+def rotate13(text):
+    result = ''
+    for char in text:
+        if char.isalpha():
+            # Determine if it's uppercase or lowercase
+            base = ord('A') if char.isupper() else ord('a')
+            result += chr((ord(char) - base + 13) % 26 + base)
+        else:
+            result += char
+    return result
+
+#rotate13(scriptCode)
+obfuscated = rotate13(scriptCode)
+print(obfuscated)
+#print(scriptCode)
