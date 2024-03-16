@@ -67,5 +67,8 @@ def rotate13(text):
 
 #rotate13(scriptCode)
 obfuscated = rotate13(scriptCode)
-print(obfuscated)
+#print(obfuscated)
+
+with open('obfuscated.txt', 'w') as file:
+    file.write(obfuscated)
 #print(scriptCode)

@@ -1,0 +1,74 @@
+qrs znva():
+    #Gjb fnzcyr fgevatf
+    fgevat1 = "Guvf vf na rknzcyr fgevat, "
+    fgevat2 = "Guvf vf fbzr zber grkg "
+    
+    #Pbapngrangr fgevatf gbtrgure
+    pbapngrangrq_fgevat = fgevat1 + fgevat2
+    cevag("Pbapngrangrq: ", pbapngrangrq_fgevat)
+    
+    #Yratgu
+    cevag("Fgevat yratgu: ", yra(pbapngrangrq_fgevat))
+    
+    #Npprffvat punenpgref
+    cevag("Svefg punenpgre: ", pbapngrangrq_fgevat[0])
+    cevag("Ynfg punenpgre: ", pbapngrangrq_fgevat[-1])
+    
+    #Fyvpvat
+    cevag("Fhofgevat sebz vaqrk 7 gb raq:", pbapngrangrq_fgevat[7:])
+    cevag("Fhofgevat sebz vaqrk 0 gb 5:", pbapngrangrq_fgevat[:5])
+    cevag("Fhofgevat sebz vaqrk 7 gb 12:", pbapngrangrq_fgevat[7:12])
+    
+    #Fgevat ercrgvgvba
+    ercrngrq_fgevat = fgevat1 * 3
+    cevag("Ercrngrq: ", ercrngrq_fgevat)
+    
+    #Sbeznggvat
+    anzr = "Hfre"
+    ntr = 21
+    sbeznggrq_fgevat = s"Zl anzr vf {anzr} naq V nz {ntr} lrnef byq."
+    cevag("Sbeznggrq fgevat:", sbeznggrq_fgevat)
+    
+    #Fgevat zrgubqf
+    ybjrepnfr_fgevat = pbapngrangrq_fgevat.ybjre()
+    cevag("Ybjrepnfr: ", ybjrepnfr_fgevat)
+    
+    hccrepnfr_fgevat = pbapngrangrq_fgevat.hccre()
+    cevag("Hccrepnfr: ", hccrepnfr_fgevat)
+    
+    #Purpx vs fgnegf be raqf jvgu n fcrpvsvp fhofgevat
+    cevag("Qbrf gur pbapngrangrq fgevat fgneg jvgu 'Guvf'? ", pbapngrangrq_fgevat.fgnegfjvgu("Guvf"))
+    cevag("Qbrf gur pbapngrangrq fgevat raq jvgu 'fbzr!'? ", pbapngrangrq_fgevat.raqfjvgu("fbzr"))
+    
+    #Pbhag bppheeraprf 
+    fhofgevat_pbhag = pbapngrangrq_fgevat.pbhag("b")
+    cevag("Ahzore bs bppheeraprf bs 'b' va pbapngrangrq fgevat:", fhofgevat_pbhag)
+    
+    #Svaq vaqrk
+    fhofgevat_vaqrk = pbapngrangrq_fgevat.svaq("grkg")
+    cevag("Vaqrk bs 'grkg' va pbapngrangrq fgevat:", fhofgevat_vaqrk)
+    
+    erirefrq_fgevat = pbapngrangrq_fgevat[::-1]
+    cevag("Erirefrq: ", erirefrq_fgevat)
+
+jvgu bcra('pbqrBoshfpngr.cl', 'e') nf svyr:
+    fpevcgPbqr = svyr.ernq()
+        
+qrs ebgngr13(grkg):
+    erfhyg = ''
+    sbe pune va grkg:
+        vs pune.vfnycun():
+            # Qrgrezvar vs vg'f hccrepnfr be ybjrepnfr
+            onfr = beq('N') vs pune.vfhccre() ryfr beq('n')
+            erfhyg += pue((beq(pune) - onfr + 13) % 26 + onfr)
+        ryfr:
+            erfhyg += pune
+    erghea erfhyg
+
+#ebgngr13(fpevcgPbqr)
+boshfpngrq = ebgngr13(fpevcgPbqr)
+cevag(boshfpngrq)
+
+jvgu bcra('boshfpngrq.gkg', 'j') nf svyr:
+    svyr.jevgr(boshfpngrq)
+#cevag(fpevcgPbqr)
